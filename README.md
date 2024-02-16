@@ -11,5 +11,3 @@ dataset.py: load mnist dataset with keras and make some modifcations
 hyperparameters.py: there are all the hyperparameters in a dictionary
 network.py: code of the neural network
 parameters.json: when the network will finished the training the parameters will be saved in a json file if the accuracy reached a certain threshold
-
-## Performance
