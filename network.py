@@ -157,19 +157,3 @@ accuracy = nn.train(train_data, epochs, mini_batch_size, lr, beta, gamma, epsilo
 
 if accuracy >= 96:
     nn.save('parameters.json') # save parameters
-
-# plot cost
-plt.scatter(nn.costs, [i  + 1 for i in range(epochs)])
-
-plt.xlabel('loss')
-plt.ylabel('epoch')
-
-plt.show()
-
-# plot accuracy
-plt.scatter(nn.accuracies, [i  + 1 for i in range(epochs)])
-
-plt.xlabel('loss')
-plt.ylabel('epoch')
-
-plt.show()
