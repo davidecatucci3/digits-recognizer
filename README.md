@@ -1,5 +1,5 @@
 # recognize-digits
-Neural Network (create from scratch) that recognize digits, the model has been trained on the mnist datasets, with images of 28x28 dimension
+Neural Network (created from scratch) that recognize digits, the model has been trained on the mnist datasets, with images of 28x28 dimension
 
 ## Network
 The network has 6 layers: [784, 128, 128, 128, 128, 10], use Adam optimization with hyperparameters write in the hyperparameters.py file,
