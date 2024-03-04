@@ -147,9 +147,9 @@ nn = NeuralNetwork([input_size, 128, 128, 128, 128, 10])
 epochs = hyperparameters['epochs']
 mini_batch_size = hyperparameters['mini batch size']
 lr = hyperparameters['learning rate']
-beta = hyperparameters['beta']
+beta = hyperparameters['momentum']
 gamma = hyperparameters['gamma']
-epsilon = hyperparameters['epsilon']
+epsilon = hyperparameters['weight decay']
 
 accuracy = nn.train(train_data, epochs, mini_batch_size, lr, beta, gamma, epsilon, test_data)
 
