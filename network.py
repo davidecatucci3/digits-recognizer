@@ -5,7 +5,6 @@ import json
 from hyperparameters import hyperparameters
 from dataset import train_data, test_data
 
-
 # activation function
 def sigmoid(z):
     return 1.0 / (1.0 + np.exp(-z))
