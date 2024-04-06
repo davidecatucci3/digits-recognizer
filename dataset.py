@@ -1,7 +1,8 @@
 import numpy as np
-import keras
 
-(x_train, y_train), (x_test, y_test) = keras.datasets.mnist.load_data() # import mnist dataset
+from keras.datasets import mnist
+
+(x_train, y_train), (x_test, y_test) = mnist.load_data() # import mnist dataset
 
 train_data = []
 test_data = []

@@ -44,7 +44,7 @@ class NeuralNetwork:
             _, _, a = self.feedforward(x)
             cost += np.linalg.norm(a - y) ** 2
         
-        return (1 / len(data)) * cost
+        return (1 / ( 2 * len(data))) * cost
 
     def feedforward(self, x):
         pre_activations = []
