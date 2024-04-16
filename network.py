@@ -65,14 +65,14 @@ class NeuralNetwork:
         curr_dldw = [np.zeros(w.shape) for w in self.weights]
         curr_dldb = [np.zeros(b.shape) for b in self.biases]
 
-        dldx = loss_function_prime(activations[-1], y) * sigmoid_prime(pre_activations[-1])
-        curr_dldw[-1] = np.dot(dldx, activations[-2].transpose())
-        curr_dldb[-1] = dldx
+        delta = loss_function_prime(activations[-1], y) * sigmoid_prime(pre_activations[-1])
+        curr_dldw[-1] = np.dot(delta, activations[-2].transpose())
+        curr_dldb[-1] = delta
 
         for i in range(2, self.num_layers):
-            dldx = np.dot(self.weights[-i + 1].transpose(), dldx) * sigmoid_prime(pre_activations[-i]) 
-            curr_dldw[-i] = np.dot(dldx, activations[-i - 1].transpose())
-            curr_dldb[-i] = dldx
+            delta = np.dot(self.weights[-i + 1].transpose(), delta) * sigmoid_prime(pre_activations[-i]) 
+            curr_dldw[-i] = np.dot(delta, activations[-i - 1].transpose())
+            curr_dldb[-i] = delta
 
         return curr_dldw, curr_dldb
 
