@@ -14,5 +14,4 @@ to reached
 
 ## How to use it
 You can set you hyperparameters by editing the hyperparameters.py file, after you have to go in the network.py file and 
-set the number of layers and the number of neuron for each layer, at the end you can call the ```nn.train(...)``` function (
-that return the accuracy)
+set the number of layers and the number of neuron for each layer, at the end you can call the ```nn.train(...)``` function (that return the accuracy)
