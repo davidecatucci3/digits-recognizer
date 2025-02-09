@@ -7,10 +7,10 @@ has reached an accuracy of about 97%, i've tried a lot of different hyperparamet
 to reached
 
 ## Files
-- dataset.py: load mnist dataset with keras and make some modifcations
-- hyperparameters.py: there are all the hyperparameters in a dictionary
-- network.py: code of the neural network
-- parameters.json: when the network will finished the training the parameters will be saved in a json file if the accuracy reached a certain threshold
+- src/dataset.py: load mnist dataset with keras and make some modifcations
+- src/hyperparameters.py: there are all the hyperparameters in a dictionary
+- src/network.py: code of the neural network
+- model/parameters.json: when the network will finished the training the parameters will be saved in a json file if the accuracy reached a certain threshold
 
 ## How to use it
 You can set you hyperparameters by editing the hyperparameters.py file, after you have to go in the network.py file and 
