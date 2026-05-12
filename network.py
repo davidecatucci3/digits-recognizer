@@ -91,7 +91,7 @@ class NeuralNetwork:
                 sum_dldb = [a + b for a, b in zip(sum_dldb, curr_dldb)]
             
             self.momentum_w = [beta * mw + (1 - beta) * dw for mw, dw in zip(self.momentum_w, sum_dldw)]
-            self.momentum_w = [beta * mb + (1 - beta) * db for mb, db in zip(self.momentum_w, sum_dldw)]
+            self.momentum_b = [beta * mb + (1 - beta) * db for mb, db in zip(self.momentum_b, sum_dldb)]
 
             self.velocity_w = [gamma * vw + (1 - gamma) * (dw ** 2) for vw, dw in zip(self.velocity_w, sum_dldw)]
             self.velocity_b = [gamma * vb + (1 - gamma) * (db ** 2) for vb, db in zip(self.velocity_b, sum_dldb)]
