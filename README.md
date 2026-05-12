@@ -137,23 +137,6 @@ The file contains:
 
 ---
 
-## Known Issues
-
-There is a bug in the `SGD` method — the momentum update for biases overwrites the weights momentum instead of updating `momentum_b`:
-
-```python
-# Bug (line 2 should reference momentum_b and sum_dldb):
-self.momentum_w = [beta * mw + (1 - beta) * dw for mw, dw in zip(self.momentum_w, sum_dldw)]
-self.momentum_w = [beta * mb + (1 - beta) * db for mb, db in zip(self.momentum_w, sum_dldw)]  # ← wrong
-
-# Fix:
-self.momentum_b = [beta * mb + (1 - beta) * db for mb, db in zip(self.momentum_b, sum_dldb)]
-```
-
-This causes bias momentum to never update, and weight momentum to be overwritten each step.
-
----
-
 ## License
 
 MIT License. See `LICENSE` for details.
